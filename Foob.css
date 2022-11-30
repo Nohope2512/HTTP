@@ -1,0 +1,280 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Gill Sans Extrabold', 'Heisei Mincho W9';
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-color: lightblue;
+}
+
+.header{
+  background-color: white;
+  background-repeat: repeat-x;
+  max-height: 100px;
+  border-bottom: solid 2px black;
+}
+
+.intro {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: lightgrey;
+  border: 4px solid black;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: solid 2px black;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  border: solid 2px black;
+}
+
+@media screen and (max-width: 600px) {
+ 
+   .timeline::after {
+  left: 31px;
+  }
+  
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  .right {
+  left: 0%;
+  }
+}
+#menu li {
+  color: #000;
+  text-decoration: none;
+  line-height: 40px;
+  padding: 0px 20px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 28px;
+  overflow: hidden;
+}
+
+
+.menu_li :hover {
+  border-bottom: 3px solid red;
+}
+
+.active {
+  border-bottom: 3px solid red;
+}
+
+#menu li{
+
+  display: inline-block;
+}
+
+#menu #menu_li:hover a{
+  color: #000;
+  animation: blur .4s forwards,font_blur  1s forwards ;
+}
+
+.footer {
+  padding: 20px;
+  text-align: left;
+  background: #ddd;
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+
+#follow{
+
+  flex-basis: 70%;
+  margin: 20px;
+  max-width: 35%;
+}
+
+#contact{
+  flex-basis: 30%;
+  margin: 20px;
+  max-width: 35%;
+}
+
+.register-box{
+  align-content: center;
+  border:solid 3px;
+  padding: 60px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 450px;
+  margin-right: 450px;
+  border-radius: 2%;
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+}
+
+#main-conent{
+  background-image: url(C:/Users/ADMIN/Desktop/Fo.jpg);
+  background-size: cover;
+  padding: 1px;
+}
+.register-content{
+  font-weight: bold;
+}
+
+.Font{
+  background-image: url(C:/Users/ADMIN/Desktop/Ham.jpg);
+  background-size: cover;
+}
+#list{
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+}
+
+input{
+  width: 75%;
+}
+
+.button{
+    border-color: solid 2px lightblue;
+    color: black;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.btn{
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    font-size: 21px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card1{
+  display: flex;
+  justify-content: space-around;
+}
+
+.card2{
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  margin: 40px;
+  margin-right: 30px;
+  max-width: 65%;
+}
+
+@import url(netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+#rating{border:none;float:left;}
+#rating>input{display:none;}
+#rating>label:before{margin:5px;font-size:3em;font-family:FontAwesome;display:inline-block;content:"\f005";}
+#rating>.half:before{content:"\f089";position:absolute;}
+#rating>label{color:#ddd;float:right;}
+
+.sta{
+  background-color: white;
+  background-size: cover;
+  margin: 0px;
+  padding-top: 144px;
+  padding-bottom: 260px;
+}
+
+#rating>input:checked~label,
+#rating:not(:checked)>label:hover, 
+#rating:not(:checked)>label:hover~label{
+  color:#FFD700;
+}
+
+#rating>input:checked+label:hover,
+#rating>input:checked~label:hover,
+#rating>label:hover~input:checked~label,
+#rating>input:checked~label:hover~label{
+  color:#FFED85;
+}
